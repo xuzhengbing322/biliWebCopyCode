@@ -1,0 +1,21 @@
+{
+  "name": "domeec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lessc src/bl.less public/bl.css",
+    "start": "http-server -c-1 --cors -o",
+    "change": "tsc src/hello.ts "
+  },
+  "keywords": [],
+  "author": "xzb <xzb@qq.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "less": "^4.1.2",
+    "typescript": "^4.6.2"
+  }
+}
