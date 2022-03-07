@@ -1,108 +1,121 @@
 <link rel="stylesheet" href="./biliWebCode.css" />
 <div class="bilitop">
-    <div class="bilitop_bar">
-        <ul class="left_entry">
-            <li class="home"><a href="https://www.bilibili.com/?spm_id_from=333.1007.0.0"><span>首页</span></a></li>
-            <li class="drama"><a href="https://www.bilibili.com/anime/?spm_id_from=333.1007.0.0">番剧</a></li>
-            <li class="zb"><a href="https://live.bilibili.com/?spm_id_from=333.1007.0.0">直播</a></li>
-            <li class="game"><a href="https://game.bilibili.com/platform/?spm_id_from=333.1007.0.0">游戏中心</a></li>
-            <li class="vip"><a href="https://show.bilibili.com/platform/home.html?msource=pc_web&spm_id_from=333.1007.0.0">会员购</a></li>
-            <li class="comic"><a href="https://manga.bilibili.com/?from=bill_top_mnav&spm_id_from=333.1007.0.0">漫画</a></li>
-            <li class="competition"><a href="https://www.bilibili.com/v/game/match/?spm_id_from=333.1007.0.0">赛事</a></li>
-            <li class="app"><a href="https://app.bilibili.com/?spm_id_from=333.1007.0.0">下载APP</a></li>
-        </ul>
+  <div class="bilitop_bar">
+    <ul class="left_entry">
+      <li class="home"><a href="https://www.bilibili.com/?spm_id_from=333.1007.0.0"><span>首页</span></a></li>
+      <li class="drama"><a href="https://www.bilibili.com/anime/?spm_id_from=333.1007.0.0">番剧</a></li>
+      <li class="zb"><a href="https://live.bilibili.com/?spm_id_from=333.1007.0.0">直播</a></li>
+      <li class="game"><a href="https://game.bilibili.com/platform/?spm_id_from=333.1007.0.0">游戏中心</a></li>
+      <li class="vip"><a
+          href="https://show.bilibili.com/platform/home.html?msource=pc_web&spm_id_from=333.1007.0.0">会员购</a></li>
+      <li class="comic"><a href="https://manga.bilibili.com/?from=bill_top_mnav&spm_id_from=333.1007.0.0">漫画</a></li>
+      <li class="competition"><a href="https://www.bilibili.com/v/game/match/?spm_id_from=333.1007.0.0">赛事</a></li>
+      <li class="app"><a href="https://app.bilibili.com/?spm_id_from=333.1007.0.0">下载APP</a></li>
+    </ul>
 
-        <div class="center_search">
-                <input type="text" id="val" placeholder="请输入搜索内容" >
-                <input type="submit"  id="btn" value="搜索">
-            <div class="show" id="show">  </div>
-        </div>
-
-        <script>
-            let arr = ['番剧','直播','游戏中心','会员购','漫画','赛事','下载APP','大会员','信息','动态','收藏','历史','创作中心','投稿'];
-           var input = document.getElementById("val");
-           var show = document.getElementById("show");
-            input.onkeyup = function(){
-                show.style.display = 'block';
-                
-               let str = [];
-               arr.forEach((item)=>{
-                var res = item.indexOf(input.value);
-                if(res != -1){
-                    str += '<p>'+item+'</p>';
-                }
-               })
-               if(!input.value || !str){
-                    show.innerHTML = '<p>暂无结果</p>'
-                }else{
-                    show.innerHTML = str;
-                }
-            }
-            
-            input.onblur = function(){
-                show.style.display = 'none';
-                input.value = '';
-            }
-        </script>
-
-        <ul class="right_entry">
-            <li class="bb"><a href="https://space.bilibili.com/243857124?spm_id_from=333.1007.0.0">
-                <img  border="0" src="b1.ico"  width="18px" height="14.5px" > </a></li>
-            <li class="member"><a href="https://account.bilibili.com/account/big?spm_id_from=333.1007.0.0">大会员</a></li>
-            <li class="message"><a href="https://message.bilibili.com/?spm_id_from=333.1007.0.0#/reply">信息</a></li>
-            <li class="dynamic"><a href="https://t.bilibili.com/?spm_id_from=333.1007.0.0">动态</a></li>
-            <li class="collect"><a href="https://space.bilibili.com/243857124/favlist?spm_id_from=333.1007.0.0">收藏</a></li>
-            <li class="history"><a href="https://www.bilibili.com/account/history?spm_id_from=333.1007.0.0">历史</a></li>
-            <li class="produce"><a href="https://member.bilibili.com/platform/home?spm_id_from=333.880.b_696e7465726e6174696f6e616c486561646572.30">创作中心</a></li>
-            <li class="contribute"><a href="https://member.bilibili.com/platform/upload/video/frame?spm_id_from=333.1007.top_bar.upload">投稿</a></li>
-        </ul>
-    </div>
-    
-    <div class="bilitop_banner">
-        <img src="b7.jpeg"  width="100%" height="155px">
+    <div class="center_search">
+      <input type="text" id="val" placeholder="请输入搜索内容">
+      <input type="submit" id="btn" value="搜索">
+      <div class="show" id="show"> </div>
     </div>
 
-    <div class="bilitop_channel">
-        <div class="channel_icons">
-            <li><a href="https://t.bilibili.com/?spm_id_from=333.1007.0.0">动态</a></li>
-            <li><a href="https://www.bilibili.com/v/popular/all?spm_id_from=333.1007.0.0">热门</a></li>
-            <li><a href="https://www.bilibili.com/v/channel/?spm_id_from=333.1007.0.0">频道</a></li>
-        </div>
+    <script src="biliWebCode.js"></script>
+    <!-- <script>
+      let arr = ['番剧', '直播', '游戏中心', '会员购', '漫画', '赛事', '下载APP', '大会员', '信息', '动态', '收藏', '历史', '创作中心', '投稿'];
+      var input = document.getElementById("val");
+      var show = document.getElementById("show");
+      input.onkeyup = function () {
+        show.style.display = 'block';
 
-        <div class="right_channel_container">
-            <div class="channel_items_left">
-                <li><a href="https://www.bilibili.com/anime/?spm_id_from=333.1007.0.0">番剧</a></li>
-                <li><a href="https://www.bilibili.com/v/douga/?spm_id_from=666.4.b_7072696d6172794368616e6e656c4d656e75.1">动画</a></li>
-                <li><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.5.0.0">国创</a></li>
-                <li><a href="https://www.bilibili.com/v/music/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.9">音乐</a></li>
-                <li><a href="https://www.bilibili.com/movie/?spm_id_from=333.1007.0.0">电影</a></li>
-                <li><a href="https://www.bilibili.com/tv/?spm_id_from=333.1007.0.0">电视剧</a></li>
-                <li><a href="https://www.bilibili.com/v/dance/?spm_id_from=666.8.b_7072696d6172794368616e6e656c4d656e75.27">舞蹈</a></li>
-                <li><a href="https://www.bilibili.com/documentary/?spm_id_from=333.5.0.0">纪录片</a></li>
-                <li><a href="https://www.bilibili.com/v/game/?spm_id_from=666.9.b_7072696d6172794368616e6e656c4d656e75.41">游戏</a></li>
-                <li><a href="https://www.bilibili.com/v/kichiku/?spm_id_from=333.5.0.0">鬼畜</a></li>
-                <li><a href="https://www.bilibili.com/v/cinephile?spm_id_from=333.5.0.0">影视</a></li>
-                <li><a href="https://www.bilibili.com/v/ent/?spm_id_from=333.5.0.0">娱乐</a></li>
-                <li><a href="https://www.bilibili.com/v/knowledge/?spm_id_from=333.5.0.0">知识</a></li>
-                <li><a href="https://www.bilibili.com/v/tech/?spm_id_from=333.5.0.0">科技</a></li>
-                <li><a href="https://www.bilibili.com/v/information/?spm_id_from=333.5.0.0">资讯</a></li>
-                <li><a href="https://www.bilibili.com/v/food?spm_id_from=333.5.0.0">美食</a></li>
-                <li><a href="https://www.bilibili.com/v/life?spm_id_from=333.5.0.0">生活</a></li>
-                <li><a href="https://www.bilibili.com/v/car?spm_id_from=333.5.0.0">汽车</a></li>
-                <li><a href="https://www.bilibili.com/v/fashion?spm_id_from=333.5.0.0">时尚</a></li>
-                <li><a href="https://www.bilibili.com/v/sports?spm_id_from=333.5.0.0">运动</a></li>
-                <li><a href="https://www.bilibili.com/v/animal?spm_id_from=333.5.0.0">动物圈</a></li>
-                <li><a href="https://www.bilibili.com/v/game/stand_alone?spm_id_from=333.5.0.0#/">单机</a></li>
-            </div>
-            <div class="channel_items_right">
-                <li><a href="https://www.bilibili.com/read/home?spm_id_from=333.1007.0.0">专栏</a></li>
-                <li><a href="https://www.bilibili.com/blackboard/activity-list.html?spm_id_from=333.1007.0.0">活动</a></li>
-                <li><a href="https://www.bilibili.com/blackboard/activity-5zJxM3spoS.html?spm_id_from=333.1007.0.0">社区</a></li>
-                <li><a href="https://live.bilibili.com/?spm_id_from=333.1007.0.0">直播</a></li>
-                <li><a href="https://www.bilibili.com/cheese/?spm_id_from=333.1007.0.0">课堂</a></li>
-                <li><a href="https://www.bilibili.com/v/musicplus/?spm_id_from=333.1007.0.0">新歌</a></li>
-            </div>
+        let str = [];
+        arr.forEach((item) => {
+          var res = item.indexOf(input.value);
+          if (res != -1) {
+            str += '<p>' + item + '</p>';
+          }
+        })
+        if (!input.value || !str) {
+          show.innerHTML = '<p>暂无结果</p>'
+        } else {
+          show.innerHTML = str;
+        }
+      }
 
-        </div>
+      input.onblur = function () {
+        show.style.display = 'none';
+        input.value = '';
+      }
+    </script> -->
+
+    <ul class="right_entry">
+      <li class="bb"><a href="https://space.bilibili.com/243857124?spm_id_from=333.1007.0.0">
+          <img border="0" src="b1.ico" width="18px" height="14.5px"> </a></li>
+      <li class="member"><a href="https://account.bilibili.com/account/big?spm_id_from=333.1007.0.0">大会员</a></li>
+      <li class="message"><a href="https://message.bilibili.com/?spm_id_from=333.1007.0.0#/reply">信息</a></li>
+      <li class="dynamic"><a href="https://t.bilibili.com/?spm_id_from=333.1007.0.0">动态</a></li>
+      <li class="collect"><a href="https://space.bilibili.com/243857124/favlist?spm_id_from=333.1007.0.0">收藏</a></li>
+      <li class="history"><a href="https://www.bilibili.com/account/history?spm_id_from=333.1007.0.0">历史</a></li>
+      <li class="produce"><a
+          href="https://member.bilibili.com/platform/home?spm_id_from=333.880.b_696e7465726e6174696f6e616c486561646572.30">创作中心</a>
+      </li>
+      <li class="contribute"><a
+          href="https://member.bilibili.com/platform/upload/video/frame?spm_id_from=333.1007.top_bar.upload">投稿</a></li>
+    </ul>
+  </div>
+
+  <div class="bilitop_banner">
+    <img src="b7.jpeg" width="100%" height="155px">
+  </div>
+
+  <div class="bilitop_channel">
+    <div class="channel_icons">
+      <li><a href="https://t.bilibili.com/?spm_id_from=333.1007.0.0">动态</a></li>
+      <li><a href="https://www.bilibili.com/v/popular/all?spm_id_from=333.1007.0.0">热门</a></li>
+      <li><a href="https://www.bilibili.com/v/channel/?spm_id_from=333.1007.0.0">频道</a></li>
     </div>
+
+    <div class="right_channel_container">
+      <div class="channel_items_left">
+        <li><a href="https://www.bilibili.com/anime/?spm_id_from=333.1007.0.0">番剧</a></li>
+        <li><a
+            href="https://www.bilibili.com/v/douga/?spm_id_from=666.4.b_7072696d6172794368616e6e656c4d656e75.1">动画</a>
+        </li>
+        <li><a href="https://www.bilibili.com/guochuang/?spm_id_from=333.5.0.0">国创</a></li>
+        <li><a
+            href="https://www.bilibili.com/v/music/?spm_id_from=666.5.b_7072696d6172794368616e6e656c4d656e75.9">音乐</a>
+        </li>
+        <li><a href="https://www.bilibili.com/movie/?spm_id_from=333.1007.0.0">电影</a></li>
+        <li><a href="https://www.bilibili.com/tv/?spm_id_from=333.1007.0.0">电视剧</a></li>
+        <li><a
+            href="https://www.bilibili.com/v/dance/?spm_id_from=666.8.b_7072696d6172794368616e6e656c4d656e75.27">舞蹈</a>
+        </li>
+        <li><a href="https://www.bilibili.com/documentary/?spm_id_from=333.5.0.0">纪录片</a></li>
+        <li><a
+            href="https://www.bilibili.com/v/game/?spm_id_from=666.9.b_7072696d6172794368616e6e656c4d656e75.41">游戏</a>
+        </li>
+        <li><a href="https://www.bilibili.com/v/kichiku/?spm_id_from=333.5.0.0">鬼畜</a></li>
+        <li><a href="https://www.bilibili.com/v/cinephile?spm_id_from=333.5.0.0">影视</a></li>
+        <li><a href="https://www.bilibili.com/v/ent/?spm_id_from=333.5.0.0">娱乐</a></li>
+        <li><a href="https://www.bilibili.com/v/knowledge/?spm_id_from=333.5.0.0">知识</a></li>
+        <li><a href="https://www.bilibili.com/v/tech/?spm_id_from=333.5.0.0">科技</a></li>
+        <li><a href="https://www.bilibili.com/v/information/?spm_id_from=333.5.0.0">资讯</a></li>
+        <li><a href="https://www.bilibili.com/v/food?spm_id_from=333.5.0.0">美食</a></li>
+        <li><a href="https://www.bilibili.com/v/life?spm_id_from=333.5.0.0">生活</a></li>
+        <li><a href="https://www.bilibili.com/v/car?spm_id_from=333.5.0.0">汽车</a></li>
+        <li><a href="https://www.bilibili.com/v/fashion?spm_id_from=333.5.0.0">时尚</a></li>
+        <li><a href="https://www.bilibili.com/v/sports?spm_id_from=333.5.0.0">运动</a></li>
+        <li><a href="https://www.bilibili.com/v/animal?spm_id_from=333.5.0.0">动物圈</a></li>
+        <li><a href="https://www.bilibili.com/v/game/stand_alone?spm_id_from=333.5.0.0#/">单机</a></li>
+      </div>
+      <div class="channel_items_right">
+        <li><a href="https://www.bilibili.com/read/home?spm_id_from=333.1007.0.0">专栏</a></li>
+        <li><a href="https://www.bilibili.com/blackboard/activity-list.html?spm_id_from=333.1007.0.0">活动</a></li>
+        <li><a href="https://www.bilibili.com/blackboard/activity-5zJxM3spoS.html?spm_id_from=333.1007.0.0">社区</a></li>
+        <li><a href="https://live.bilibili.com/?spm_id_from=333.1007.0.0">直播</a></li>
+        <li><a href="https://www.bilibili.com/cheese/?spm_id_from=333.1007.0.0">课堂</a></li>
+        <li><a href="https://www.bilibili.com/v/musicplus/?spm_id_from=333.1007.0.0">新歌</a></li>
+      </div>
+
+    </div>
+  </div>
 </div>
