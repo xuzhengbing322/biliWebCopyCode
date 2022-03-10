@@ -4,11 +4,11 @@ const show: any = document.getElementById('show')
 input.onkeyup = function () {
   show.style.display = 'block'
 
-  let str: string | never[] = []
+  let str: string[] = []
   arr.forEach((item) => {
     const res = item.indexOf(input.value)
     if (res !== -1) {
-      str += '<p>' + item + '</p>'
+      // str += '<p>' + item + '</p>'
     }
   })
   if (!input.value || !str) {

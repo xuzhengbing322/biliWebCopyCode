@@ -6,13 +6,18 @@
     "build": "lessc src/biliWebCode.less public/biliWebCode.css",
     "change": "tsc src/biliWebCode.ts  public/biliWebCode.js/",
     "start": "anywhere -p 8080",
-    "watch": "tsc  -w"
+    "watch": "tsc  -w",
+    "build-gulp": "gulp default",
+    "build-gulp-start": "gulp web"
   },
   "author": "xzb <xzb@qq.com>",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.14.0",
     "anywhere": "^1.5.0",
+    "babel-eslint": "^10.1.0",
+    "browserify": "^17.0.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
@@ -23,8 +28,11 @@
     "gulp-csso": "^4.0.1",
     "gulp-less": "^5.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-webserver": "^0.9.1",
     "http-server": "^14.1.0",
     "less": "^4.1.2",
-    "typescript": "^4.6.2"
+    "tsify": "^5.0.4",
+    "typescript": "^4.6.2",
+    "vinyl-source-stream": "^2.0.0"
   }
 }

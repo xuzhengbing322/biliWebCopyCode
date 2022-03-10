@@ -19,5 +19,10 @@ module.exports = {
   // （1）不使用extend节点配置整套规范，而是在rules节点中直接配置。（2）使用extend节点配置整套的规范，在rules节点中修改部分规范的配置。
   rules: {
     semi: 1 // 0:关闭，1：警告，2：报错
+  },
+  parser: '@typescript-eslint/parser',
+  // eslint-disable-next-line no-dupe-keys
+  parserOptions: {
+    parser: 'babel-eslint'
   }
 }
