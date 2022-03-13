@@ -10,6 +10,7 @@ const {
 const autoprefixer = require('gulp-autoprefixer')
 const include = require('gulp-file-include')
 const clean = require('gulp-clean')
+const typescript = require('gulp-typescript')
 
 // 转码
 const less = require('gulp-less')
@@ -23,7 +24,8 @@ const srcPath = {
   root: 'src',
   html: ['src/**/*.html', '!src/include/**/*.html'],
   images: 'src/images/*',
-  css: 'src/css/*.css',
+  // css: 'src/css/*.css',
+  ts: 'src/ts/*',
   less: 'src/less/*.less',
   js: 'src/js/*.js',
   library: 'src/library/*.js'
@@ -33,8 +35,9 @@ const distPath = {
   root: 'dist',
   html: 'dist',
   images: 'dist/images',
-  css: 'dist/css',
+  // css: 'dist/css',
   less: 'dist/less',
+  ts: 'dist/ts',
   js: 'dist/js',
   library: 'dist/library',
   manifest: 'dist/**/*.json'
@@ -42,17 +45,17 @@ const distPath = {
 
 // 开发环境
 // css处理
-function cssDev () {
-  return src(srcPath.css)
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(dest(distPath.css))
-    .pipe(reload({
-      stream: true
-    }))
-}
+// function cssDev () {
+//   return src(srcPath.css)
+//     .pipe(autoprefixer({
+//       browsers: ['last 2 versions'],
+//       cascade: false
+//     }))
+//     .pipe(dest(distPath.css))
+//     .pipe(reload({
+//       stream: true
+//     }))
+// }
 // less处理
 function lessDev () {
   return src(srcPath.less)
@@ -70,6 +73,16 @@ function lessDev () {
 function jsDev () {
   return gulp.src(srcPath.js)
     .pipe(dest(distPath.js))
+    .pipe(reload({
+      stream: true
+    }))
+}
+
+// ts处理
+function tsDev () {
+  return gulp.src(srcPath.ts)
+    .pipe(typescript())
+    .pipe(dest(distPath.ts))
     .pipe(reload({
       stream: true
     }))
@@ -121,8 +134,11 @@ function browser () {
 
 function watchDev () {
   console.log('开始监控')
-  watch(srcPath.css, function (cb) {
-    cssDev()
+  // watch(srcPath.css, function (cb) {
+  //   cssDev()
+  // })
+  watch(srcPath.ts, function (cb) {
+    tsDev()
   })
   watch(srcPath.less, function (cb) {
     lessDev()
@@ -140,4 +156,4 @@ function watchDev () {
     imagesDev()
   })
 }
-exports.dev = series(cleanDir, parallel(libraryDev, cssDev, lessDev, imagesDev, jsDev, htmlDev), browser)
+exports.dev = series(cleanDir, parallel(libraryDev, lessDev, imagesDev, jsDev, tsDev, htmlDev), browser)

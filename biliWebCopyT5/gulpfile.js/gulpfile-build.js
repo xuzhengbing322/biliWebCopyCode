@@ -1,9 +1,6 @@
 /* eslint-disable camelcase */
-// const gulp = require('gulp')
 const {
   series,
-  // parallel,
-  // watch,
   src,
   dest
 } = require('gulp')
@@ -27,6 +24,7 @@ const minifyCss = require('gulp-clean-css')
 const rev = require('gulp-rev')
 const revCollector = require('gulp-rev-collector')
 const delOriginal = require('gulp-rev-delete-original')
+// const typescript = require('gulp-typescript')
 
 // 浏览器
 // const browserSync = require('browser-sync').create()
@@ -37,8 +35,9 @@ const srcPath = {
   root: 'src',
   html: ['src/**/*.html', '!src/include/**/*.html'],
   images: 'src/images/*',
-  css: 'src/css/*.css',
+  // css: 'src/css/*.css',
   less: 'src/less/*.less',
+  ts: 'src/ts/*.ts',
   js: 'src/js/*.js',
   library: 'src/library/*.js'
 }
@@ -47,8 +46,9 @@ const buildPath = {
   root: 'build',
   html: 'build',
   images: 'build/images',
-  css: 'build/css',
+  // css: 'build/css',
   less: 'build/less',
+  ts: 'bulid/ts',
   js: 'build/js',
   library: 'build/library',
   manifest: 'build/**/*.json'
@@ -63,30 +63,30 @@ function libraryBuild () {
 }
 
 // css处理
-function cssBuild () {
-  return src([buildPath.manifest, buildPath.css + '/*.css'])
-    .pipe(revCollector())
-    .pipe(rev())
-    .pipe(delOriginal())
-    .pipe(dest(buildPath.css))
-    .pipe(rev.manifest())
-    .pipe(dest(buildPath.css))
-}
+// function cssBuild () {
+//   return src([buildPath.manifest, buildPath.css + '/*.css'])
+//     .pipe(revCollector())
+//     .pipe(rev())
+//     .pipe(delOriginal())
+//     .pipe(dest(buildPath.css))
+//     .pipe(rev.manifest())
+//     .pipe(dest(buildPath.css))
+// }
 
-function cssCompile () {
-  return src([srcPath.css])
-    .pipe(css_base64({
-      maxWeightResource: 8 * 1024
-    }))
-    .pipe(autoprefixer())
-    .pipe(minifyCss())
-    .pipe(dest(buildPath.css))
-}
+// function cssCompile () {
+//   return src([srcPath.css])
+//     .pipe(css_base64({
+//       maxWeightResource: 8 * 1024
+//     }))
+//     .pipe(autoprefixer())
+//     .pipe(minifyCss())
+//     .pipe(dest(buildPath.css))
+// }
 // less处理
 function lessBuild () {
   return src([buildPath.manifest, buildPath.less + '/*.css'])
     .pipe(revCollector())
-    .pipe(rev())
+    .pipe(rev()) // 我们可以使用gulp-rev来缓存销毁一些资产，并为它们生成清单文件。然后使用gulp-rev-collector，我们可以从几个清单文件中收集数据，并替换html模块中的资源链接
     .pipe(delOriginal())
     .pipe(dest(buildPath.less))
     .pipe(rev.manifest())
@@ -117,13 +117,21 @@ function lessCompile () {
 //     .pipe(dest(buildPath.js))
 // }
 
+function tsBuild () {
+  return src(srcPath.ts)
+    .pipe(rev())
+    .pipe(dest(buildPath.ts))
+    .pipe(rev.manifest())
+    .pipe(dest(buildPath.ts))
+}
+
 // image 处理
 function imagesBuild () {
   return src(srcPath.images)
     // .pipe(minifyImage())
-    // .pipe(rev())
-    // .pipe(dest(buildPath.images))
-    // .pipe(rev.manifest())
+    .pipe(rev())
+    .pipe(dest(buildPath.images))
+    .pipe(rev.manifest())
     .pipe(dest(buildPath.images))
 }
 // html 处理
@@ -156,5 +164,5 @@ function cleanManifest () {
 }
 
 exports.build = series(cleanBuild, imagesBuild, libraryBuild, lessCompile,
-  lessBuild, cssCompile, cssBuild, htmlBuild,
+  lessBuild, tsBuild, htmlBuild,
   cleanManifest)
