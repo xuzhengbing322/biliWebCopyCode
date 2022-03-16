@@ -93,3 +93,159 @@
     </div>
   </div>
 </div>
+
+<div class="bili-layout">
+  <div class="bili-gardone">
+    <div class="imagesleft">
+      <div id="imagesone" class="picture">
+        <img id="img" src="images/a2.jpeg" alt="" style="display: block;">
+        <!-- <img src="images/a2.jpeg" alt="">
+        <img src="images/a3.jpeg" alt="">
+        <img src="images/a4.jpeg" alt=""> -->
+
+        <!-- <p>
+          <button id="btnPrev">上</button>
+          <button id="btnNext">下</button>
+        </p> -->
+        <div class="turn" id="turn">
+          <button id="btnPrev">
+            < </button>
+              <button id="btnNext"> > </button>
+        </div>
+
+      </div>
+
+      <!-- <ul id="ulone" class="pictureList">
+        <li>pic1</li>
+        <li>pic2</li>
+        <li>pic3</li>
+        <li>pic4</li>
+      </ul> -->
+
+      <script>
+        var arr = ["images/a1.jpeg", "images/a2.jpeg", "images/a3.jpeg", "images/a4.jpeg"]
+        var divbtn = document.getElementById("turn")
+        var btns = divbtn.getElementsByTagName("button")
+        var divimg = document.getElementById("imagesone")
+        var img = divimg.getElementsByTagName("img")[0]
+        // var btns = document.querySelectorAll('button')
+        // var select = document.querySelector('.picture')
+        // const divimg = document.getElementById("imagesone")
+        // var img = document.querySelectorAll('img')[2];
+
+        var num = 0;
+        btns[1].onclick = function () {
+          console.log(btns[1]);
+          num++;
+          if (n > 3) {
+            num = 0;
+          }
+          img.src = arr[num];
+          console.log(img.src);
+        }
+
+        btns[0].onclick = function () {
+          console.log(btns[0]);
+          n--;
+          if (num < 0) {
+            num = 3;
+          }
+          img.src = arr[num];
+          console.log(img.src);
+        }
+      </script>
+
+      <!-- <script>
+        const imagesone = document.getElementById("imagesone");
+        const img = imagesone.getElementsByTagName("img");
+        // const hys = imagesone.getElementById("hys");
+        // const hyx = imagesone.getElementById("hyx");
+        const ulone = document.getElementById("ulone")
+        const li = ulone.getElementsByTagName("li");
+        hys.onclick = function () {
+          for (let j = 0; j < img.length; j++) {
+            img[j].style.display = 'none';
+          }
+        }
+        for (var i = 0; i < 4; i++) {
+          li[i].index = i;
+          li[i].onmouseover = function () {
+            this.style.backgroundColor = 'yellow';
+
+            for (let j = 0; j < img.length; j++) {
+              img[j].style.display = 'none';
+            }
+            img[this.index].style.display = 'block';
+            console.log(this);
+          }
+
+          li[i].onmouseout = function () {
+            this.style.backgroundColor = '#eee';
+          }
+        }
+      </script> -->
+
+    </div>
+    <div class="imagesright">
+      <ul class="list5">
+        <li><a
+            href="https://www.bilibili.com/video/BV1MS4y1k7Yi?from=search&seid=2540401331210108988&spm_id_from=333.337.0.0">
+            <img border="0" src="../images/s1.png" width="267px" height="150px" border-radius="2px"> <span
+              class="textone">【TheShy|孤勇者】
+              爱你孤身走暗巷
+              爱你不跪的模样</span><br><span class="texttwo">UP sak药 2-19</span></a></li>
+        <li><a href="https://www.bilibili.com/video/BV1mL411A7Us?spm_id_from=333.851.b_7265636f6d6d656e64.1">
+            <img border="0" src="../images/s2.png" width="267px" height="150px" border-radius="2px"> <span
+              class="textone">【刘嘉麒】火山活动塑造了东北大地？
+              34个火山群600多座火山</span><br><span class="texttwo">UP 刘嘉麒院士 3-11</span></a></li>
+        <li><a href="https://www.bilibili.com/video/BV1mF411t7TU?spm_id_from=333.851.b_7265636f6d6d656e64.3">
+            <img border="0" src="../images/S3.png" width="267px" height="150px" border-radius="2px"> <span
+              class="textone">视频刷累了，就来听听超治愈的罗生门（Follow）吧</span><br><span class="texttwo">UP 长乐 2-26</span></a></li>
+        <li><a href="https://www.bilibili.com/video/BV1CL411A7M4?spm_id_from=333.851.b_7265636f6d6d656e64.6">
+            <img border="0" src="../images/s4.png" width="267px" height="150px" border-radius="2px"> <span
+              class="textone">人人买得起的板鞋Club
+              C！完整科普与购买建议</span><br><span class="texttwo">UP Ricki在忙啥 3-10</span></a></li>
+        <li><a href="https://www.bilibili.com/video/BV1734y187LS?spm_id_from=333.851.b_7265636f6d6d656e64.1">
+            <img border="0" src="../images/S5.png" width="267px" height="150px" border-radius="2px"> <span
+              class="textone">这首《Touch》高潮太过洗脑，戴上耳机，再来一遍！</span><br><span class="texttwo">UP 长乐 2-26</span></a></li>
+        <li><a href="https://www.bilibili.com/video/BV17q4y1t7Bd?spm_id_from=333.851.b_7265636f6d6d656e64.6">
+            <img border="0" src="../images/S6.png" width="267px" height="150px" border-radius="2px"> <span
+              class="textone">你把这些游戏网站都玩明白了，那么你的前端就毕业了</span><br><span class="texttwo">UP 前端菌 2-18</span></a></li>
+      </ul>
+
+
+    </div>
+  </div>
+  <div class="bili-gardtwo">
+    <div class="game">
+      <h2>推广</h2>
+    </div>
+    <ul class="gameContent">
+      <li><a href="https://www.jumpserver.org/">
+          <img border="0" src="../images/t1.png" width="267px" height="150px"><span
+            class="tgone">南宁的公司都在了解的新一代堡垒机建设指南</span><br><br><span class="tgtwo">UP JumpServer</span> </a></li>
+      <li><a href="https://www.bilibili.com/video/BV1Cr4y1B79T?spm_id_from=333.1007.extension.content.click">
+          <img border="0" src="../images/t2.png" width="267px" height="150px"><span
+            class="tgone">这是我上课犯困的时候写出来的东西........</span><br><br><span class="tgtwo">UP 鹤吱菌 3-12</span> </a></li>
+      <li><a href="https://ytpc.zzttest.top/jianmo29/?track_id=pbaes.DKyfIbw73vcZDFaHwnMaxlnfc4Zdj0dWYUQizV">
+          <img border="0" src="../images/t3.png" width="267px" height="150px"><span
+            class="tgone">每天建模一小时，趁年轻学技能赚钱养活自己</span><br><br><span class="tgtwo">UP 0基础学建模</span></a></li>
+      <li><a href="https://www.bilibili.com/video/BV1iu411D7CZ?spm_id_from=333.1007.extension.content.click">
+          <img border="0" src="../images/t4.png" width="267px" height="150px"><span
+            class="tgone">嗨！你那边的春天来了吗？｜我的9件汉服春装开箱&试穿～</span><br><span class="tgtwo">UP 李蝈蝈要当红军 3-4</span></a></li>
+      <li><a href="https://www.bilibili.com/video/BV1cY411V7aY?spm_id_from=333.1007.extension.content.click">
+          <img border="0" src="../images/t5.png" width="267px" height="150px"><span
+            class="tgone">你在干什么啊，火柴人？？？</span><br><br><span class="tgtwo">UP 75fps 3-7</span></a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="div4" class="content">
+  <div class="fenqu"> <a href="https://www.bilibili.com/"> 分区 </a>
+  </div>
+  <div class="kefu">
+    <a href="https://www.bilibili.com/v/customer-service"> 客服 </a>
+  </div>
+  <div class="jiuban"> <a href="https://www.bilibili.com"> 回到旧版 </a>
+  </div>
+</div>

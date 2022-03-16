@@ -1,0 +1,453 @@
+.classa {
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.classb {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop {
+  width: 100%;
+  height: 255px;
+}
+.bilitop .bilitop_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  z-index: 10;
+}
+.bilitop .bilitop_bar .left_entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 332px;
+  height: 64px;
+  list-style: none;
+  font-size: 2px;
+  font-weight: 600;
+}
+.bilitop .bilitop_bar .left_entry .home {
+  width: 62px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .drama {
+  width: 38px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .zb {
+  width: 38px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .game {
+  width: 66px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .vip {
+  width: 52px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .comic {
+  width: 38px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .competition {
+  width: 38px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry .app {
+  width: 75px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+.bilitop .bilitop_bar .left_entry a {
+  color: #ffffff;
+  text-decoration-line: none;
+}
+.bilitop .bilitop_bar .center_search {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.bilitop .bilitop_bar .center_search input {
+  width: 60%;
+  height: 50%;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #c4b1b1;
+}
+.bilitop .bilitop_bar .center_search #btn {
+  width: 6%;
+  height: 50%;
+  background-color: #ffffff;
+}
+.bilitop .bilitop_bar .center_search .show {
+  width: 175px;
+  height: 300px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  display: none;
+  align-self: flex-end;
+}
+.bilitop .bilitop_bar .center_search .show p {
+  font-size: 12px;
+}
+.bilitop .bilitop_bar .right_entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 334px;
+  height: 50px;
+  list-style: none;
+  font-size: 2px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+.bilitop .bilitop_bar .right_entry .bb {
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .member {
+  width: 52px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .message {
+  width: 38px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .dynamic {
+  width: 38px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .collect {
+  width: 38px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .history {
+  width: 38px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .produce {
+  width: 66px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry .contribute {
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.bilitop .bilitop_bar .right_entry a {
+  color: #ffffff;
+  text-decoration-line: none;
+}
+.bilitop .bilitop_banner {
+  width: 100%;
+  height: 155px;
+  position: relative;
+}
+.bilitop .bilitop_channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.bilitop .bilitop_channel .channel_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 168px;
+  height: 63px;
+  margin-left: 80px;
+  list-style: none;
+}
+.bilitop .bilitop_channel .channel_icons li {
+  width: 40px;
+  height: 63px;
+  line-height: 63px;
+}
+.bilitop .bilitop_channel .channel_icons li a {
+  color: #000000;
+  text-decoration-line: none;
+}
+.bilitop .bilitop_channel .right_channel_container {
+  display: flex;
+  flex: 1;
+  height: 66px;
+}
+.bilitop .bilitop_channel .right_channel_container .channel_items_left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 830px;
+  height: 66px;
+  list-style: none;
+  margin-left: 60px;
+}
+.bilitop .bilitop_channel .right_channel_container .channel_items_left li {
+  width: 70px;
+  height: 28px;
+  background-color: #b8b2f0;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.bilitop .bilitop_channel .right_channel_container .channel_items_left li a {
+  color: #3b3030;
+  text-decoration-line: none;
+}
+.bilitop .bilitop_channel .right_channel_container .channel_items_right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 230px;
+  height: 66px;
+  list-style: none;
+  margin-left: 60px;
+}
+.bilitop .bilitop_channel .right_channel_container .channel_items_right li {
+  width: 70px;
+  height: 28px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.bilitop .bilitop_channel .right_channel_container .channel_items_right a {
+  color: #3b3030;
+  text-decoration-line: none;
+}
+.bili-layout {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  height: 850px;
+}
+.bili-layout .bili-gardone {
+  display: flex;
+  width: 1600px;
+  height: 431px;
+}
+.bili-layout .bili-gardone .imagesleft {
+  width: 548px;
+  height: 431px;
+}
+.bili-layout .bili-gardone .imagesleft .picture {
+  width: 488px;
+  height: 360px;
+  margin-top: 17px;
+  margin-left: 60px;
+  position: relative;
+}
+.bili-layout .bili-gardone .imagesleft .picture img {
+  width: 488px;
+  height: 360px;
+  position: relative;
+}
+.bili-layout .bili-gardone .imagesleft .picture div {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 70px;
+  position: absolute;
+  z-index: 200;
+  bottom: 50px;
+  right: 50px;
+}
+.bili-layout .bili-gardone .imagesleft .picture div #btnPrev {
+  width: 30px;
+  height: 30px;
+}
+.bili-layout .bili-gardone .imagesleft .picture div #btnNext {
+  width: 30px;
+  height: 30px;
+}
+.bili-layout .bili-gardone .imagesleft .pictureList {
+  display: flex;
+  list-style: none;
+  width: 528px;
+  height: 15px;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+.bili-layout .bili-gardone .imagesleft .pictureList li {
+  width: 120px;
+  height: 15px;
+  background-color: #eee;
+  border: 1px solid #e05656;
+  line-height: 15px;
+  text-align: center;
+}
+.bili-layout .bili-gardone .imagesright {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  height: 431px;
+}
+.bili-layout .bili-gardone .imagesright .list5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 820px;
+  height: 480px;
+}
+.bili-layout .bili-gardone .imagesright .list5 li {
+  width: 260px;
+  height: 210px;
+  list-style: none;
+  margin: 0px,10px;
+}
+.bili-layout .bili-gardone .imagesright .list5 li .textone {
+  font-weight: 600;
+  font-size: small;
+  color: #141313;
+  list-style: none;
+}
+.bili-layout .bili-gardone .imagesright .list5 li .texttwo {
+  font-weight: 600;
+  font-size: x-small;
+  color: #141313;
+}
+.bili-layout .bili-gardone .imagesright .list5 li a {
+  text-decoration-line: none;
+}
+.bili-layout .bili-gardone .imagesright .list5 li span:hover {
+  color: #2912aa;
+}
+.bili-layout .bili-gardtwo {
+  width: 100%;
+  height: 246px;
+  margin-top: 10px;
+}
+.bili-layout .bili-gardtwo .game {
+  width: 100%;
+  height: 28px;
+}
+.bili-layout .bili-gardtwo .game h2 {
+  margin-left: 60px;
+}
+.bili-layout .bili-gardtwo .gameContent {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 1380px;
+  height: 205px;
+}
+.bili-layout .bili-gardtwo .gameContent li {
+  width: 260px;
+  height: 210px;
+  list-style: none;
+  margin: 0px,10px;
+}
+.bili-layout .bili-gardtwo .gameContent li .tgone {
+  font-weight: 600;
+  font-size: small;
+  color: #141313;
+  list-style: none;
+}
+.bili-layout .bili-gardtwo .gameContent li .tgtwo {
+  font-weight: 600;
+  font-size: x-small;
+  color: #141313;
+}
+.bili-layout .bili-gardtwo .gameContent li a {
+  text-decoration-line: none;
+}
+.bili-layout .bili-gardtwo .gameContent li span:hover {
+  color: #2912aa;
+}
+.content {
+  height: 2000px;
+}
+.content .fenqu {
+  width: 35px;
+  height: 50px;
+  background-color: #f8fbfc;
+  border: 1px solid #b4b2b2;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  bottom: 220px;
+  right: 20px;
+  font-size: small;
+  font-weight: 500;
+}
+.content .fenqu a {
+  text-decoration: none;
+}
+.content .kefu {
+  width: 35px;
+  height: 50px;
+  background-color: #f8fbfc;
+  border: 1px solid #b4b2b2;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  font-size: small;
+  font-weight: 500;
+}
+.content .kefu a {
+  text-decoration: none;
+}
+.content .jiuban {
+  width: 35px;
+  height: 35px;
+  background-color: #f8fbfc;
+  border: 1px solid #b4b2b2;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  font-size: small;
+  font-weight: 500;
+}
+.content .jiuban a {
+  text-decoration: none;
+}

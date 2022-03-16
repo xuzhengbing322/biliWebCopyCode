@@ -56,7 +56,7 @@ const buildPath = {
 
 // 生产环境
 // 第三方库
-function libraryBuild() {
+function libraryBuild () {
   return src(srcPath.library)
     .pipe(minifyJs())
     .pipe(dest(buildPath.library))
@@ -83,7 +83,7 @@ function libraryBuild() {
 //     .pipe(dest(buildPath.css))
 // }
 // less处理
-function lessBuild() {
+function lessBuild () {
   return src([buildPath.manifest, buildPath.less + '/*.css'])
     .pipe(revCollector())
     .pipe(rev()) // 我们可以使用gulp-rev来缓存销毁一些资产，并为它们生成清单文件。然后使用gulp-rev-collector，我们可以从几个清单文件中收集数据，并替换html模块中的资源链接
@@ -93,7 +93,7 @@ function lessBuild() {
     .pipe(dest(buildPath.less))
 }
 
-function lessCompile() {
+function lessCompile () {
   return src([srcPath.less])
     .pipe(css_base64({
       maxWeightResource: 8 * 1024
@@ -117,7 +117,7 @@ function lessCompile() {
 //     .pipe(dest(buildPath.js))
 // }
 
-function tsBuild() {
+function tsBuild () {
   return src(srcPath.ts)
     .pipe(typescript())
     // .pipe(rev())
@@ -127,7 +127,7 @@ function tsBuild() {
 }
 
 // image 处理
-function imagesBuild() {
+function imagesBuild () {
   return src(srcPath.images)
     // .pipe(minifyImage())
     .pipe(rev())
@@ -136,7 +136,7 @@ function imagesBuild() {
     .pipe(dest(buildPath.images))
 }
 // html 处理
-function htmlBuild() {
+function htmlBuild () {
   return src([buildPath.manifest, ...srcPath.html])
     .pipe(include({}))
     .pipe(revCollector({
@@ -149,7 +149,7 @@ function htmlBuild() {
 }
 
 // 清除build目录
-function cleanBuild() {
+function cleanBuild () {
   return src('build/*')
     .pipe(clean({
       read: false
@@ -157,7 +157,7 @@ function cleanBuild() {
 }
 
 // 清除manifest
-function cleanManifest() {
+function cleanManifest () {
   return src('build/**/*.json')
     .pipe(clean({
       read: false

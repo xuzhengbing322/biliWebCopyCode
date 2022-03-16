@@ -87,7 +87,7 @@
 
             #btn{
                 width: 6%;
-                height: 58%;
+                height: 50%;
                 background-color: rgb(255, 255, 255);
             }
 
@@ -246,3 +246,217 @@
         }
     }
 }
+
+.bili-layout{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  height: 850px;
+  
+  .bili-gardone{
+    display: flex;
+    width: 1600px;
+    height: 431px;
+    .imagesleft{
+      width: 548px;
+      height: 431px;
+      // margin-top: 20px;
+      .picture{
+        width: 488px;
+        height: 360px;
+        margin-top: 17px;
+        margin-left: 60px;
+        position: relative;
+        img{
+          width: 488px;
+          height: 360px;
+          // display: none;
+          // display: block;
+          position: relative;
+          // margin-right: 20px;
+        }
+        div{
+          display: flex;
+          justify-content: space-between;
+          height: 40px;
+          width: 70px;
+          position: absolute;
+          z-index: 200;
+          bottom: 50px;
+          right: 50px;
+          #btnPrev{
+            width: 30px;
+            height: 30px;
+            
+          }
+          #btnNext{
+            width: 30px;
+            height: 30px;
+            
+          }
+        }
+      }
+      .pictureList{
+        display: flex;
+        // justify-content: space-between;
+        list-style: none;
+        width: 528px;
+        height: 15px;
+        margin-top: 0px;
+        margin-left: 20px;
+        li {
+          // display: flex;
+          width: 120px;
+          height: 15px;
+          background-color: #eee;
+          border: 1px solid rgb(224, 86, 86);
+          line-height: 15px;
+          text-align: center;
+        }
+      }
+    }
+    .imagesright{
+      display: flex;
+      flex-wrap: wrap;
+      width: 1000px;
+      height: 431px;
+      .list5{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 820px;
+        height: 480px;
+        // margin: 0px,20px;
+        li {
+          // display: flex;
+          // flex-wrap: wrap;
+          width: 260px;
+          height: 210px;
+          list-style: none;
+          margin: 0px,10px;
+          // color: rgb(0, 0, 0);
+          .textone{
+            font-weight:600;
+            font-size:small;
+            color: rgb(20, 19, 19);
+            list-style: none;
+          }
+          .texttwo{
+            font-weight:600;
+            font-size:x-small;
+            color: rgb(20, 19, 19);
+          }
+          a{
+            text-decoration-line: none;
+          }
+          span:hover{
+            color: rgb(41, 18, 170);
+          }
+        }
+      }
+    }
+  }
+  .bili-gardtwo{
+    width: 100%;
+    height: 246px;
+    margin-top: 10px;
+    .game{
+      width: 100%;
+      height: 28px;
+      h2{
+        margin-left: 60px;
+      }
+
+    }
+    .gameContent{
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 1380px;
+      height: 205px;
+      li {
+        width: 260px;
+        height: 210px;
+        list-style: none;
+        margin: 0px,10px;
+        // color: rgb(0, 0, 0);
+        .tgone{
+          font-weight:600;
+          font-size:small;
+          color: rgb(20, 19, 19);
+          list-style: none;
+        }
+        .tgtwo{
+          font-weight:600;
+          font-size:x-small;
+          color: rgb(20, 19, 19);
+        }
+        a{
+          text-decoration-line: none;
+        }
+        span:hover{
+          color: rgb(41, 18, 170);
+        }
+      }
+    }
+  }
+}
+
+.content{
+  height: 2000px; 
+  .fenqu{
+    width: 35px;
+    height: 50px;
+    background-color: rgb(248, 251, 252);
+    border: 1px solid rgb(180, 178, 178);
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    position:fixed;
+    bottom:220px;
+    right: 20px;
+    font-size: small;
+    font-weight:500;
+    a{
+      text-decoration:none;
+    }
+  }
+  .kefu{
+    width: 35px;
+    height: 50px;
+    background-color: rgb(248, 251, 252);
+    border: 1px solid rgb(180, 178, 178);
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    position:fixed;
+    bottom:160px;
+    right: 20px;
+    font-size: small;
+    font-weight:500;
+    a{
+      text-decoration:none;
+    }
+  }
+  .jiuban{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(248, 251, 252);
+    border: 1px solid rgb(180, 178, 178);
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    // line-height: 30px;
+    position:fixed;
+    bottom:100px;
+    right: 20px;
+    font-size: small;
+    font-weight:500;
+    a{
+      text-decoration:none;
+    }
+  } 
+}
+

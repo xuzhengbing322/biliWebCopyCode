@@ -83,3 +83,80 @@
     </div>
   </div>
 </div>
+
+<div class="bili-layout">
+  <div class="bili-gardone">
+    <div class="imagesleft">
+      <div id="imagesone" class="picture">
+        <img src="a1.jpeg" alt="" style="display: block;">
+        <img src="a2.jpeg" alt="">
+        <img src="a3.jpeg" alt="">
+        <img src="a4.jpeg" alt="">
+      </div>
+
+      <ul id="ulone" class="pictureList">
+        <li>pic1</li>
+        <li>pic2</li>
+        <li>pic3</li>
+        <li>pic4</li>
+      </ul>
+
+      <script>
+        const imagesone = document.getElementById("imagesone");
+        var img = imagesone.getElementsByTagName("img");
+        var ulone = document.getElementById("ulone")
+        var li = ulone.getElementsByTagName("li");
+        for (var i = 0; i < li.length; i++) {
+          li[i].index = i;
+          li[i].onmouseover = function () {
+            this.style.backgroundColor = 'yellow';
+
+            for (let j = 0; j < img.length; j++) {
+              img[j].style.display = 'none';
+            }
+            img[this.index].style.display = 'block';
+            console.log(this);
+          }
+
+          li[i].onmouseout = function () {
+            this.style.backgroundColor = '#eee';
+          }
+        }
+      </script>
+
+    </div>
+    <div class="imagesright">
+      <ul class="list5">
+        <li><a href="https://www.bilibili.com/video/BV1pL411F7XS?spm_id_from=333.851.b_7265636f6d6d656e64.1">
+            <img border="0" src="w1.png" width="238px" height="206px"> </a></li>
+        <li><a href="https://www.bilibili.com/video/BV1MS4y157SK?spm_id_from=333.851.b_7265636f6d6d656e64.2">
+            <img border="0" src="w2.png" width="238px" height="206px"> </a></li>
+        <li><a href="https://www.bilibili.com/video/BV1cm4y1o75z?spm_id_from=333.851.b_7265636f6d6d656e64.3">
+            <img border="0" src="w3.png" width="238px" height="206px"> </a></li>
+        <li><a href="https://www.bilibili.com/video/BV1qF411E7ei?spm_id_from=333.851.b_7265636f6d6d656e64.4">
+            <img border="0" src="w4.png" width="238px" height="206px"> </a></li>
+        <li><a href="https://www.bilibili.com/video/BV1jY411578h?spm_id_from=333.851.b_7265636f6d6d656e64.5">
+            <img border="0" src="w5.png" width="238px" height="206px"> </a></li>
+        <li><a href="https://www.bilibili.com/video/BV1dq4y187MC?spm_id_from=333.851.b_7265636f6d6d656e64.6">
+            <img border="0" src="w6.png" width="238px" height="206px"> </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bili-gardtwo">
+    <div class="game">
+      <h2>赛事</h2>
+    </div>
+    <ul class="gameContent">
+      <li><a href="https://www.bilibili.com/video/BV1ZS4y1F71A?spm_id_from=333.1007.partition_recommend.content.click">
+          <img border="0" src="g1.png" width="230px" height="220px"> </a></li>
+      <li><a href="https://live.bilibili.com/55?spm_id_from=333.1007.partition_recommend.content.click">
+          <img border="0" src="g2.png" width="230px" height="220px"> </a></li>
+      <li><a href="https://www.bilibili.com/video/BV1BF411E7r8?spm_id_from=333.1007.partition_recommend.content.click">
+          <img border="0" src="g3.png" width="230px" height="220px"> </a></li>
+      <li><a href="https://www.bilibili.com/video/BV1MS4y1k7tG?spm_id_from=333.1007.partition_recommend.content.click">
+          <img border="0" src="g4.png" width="230px" height="220px"> </a></li>
+      <li><a href="https://www.bilibili.com/video/BV1mL411K74H?spm_id_from=333.1007.partition_recommend.content.click">
+          <img border="0" src="g5.png" width="230px" height="220px"> </a></li>
+    </ul>
+  </div>
+</div>
