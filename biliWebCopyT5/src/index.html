@@ -19,7 +19,7 @@
       <div class="show" id="show"> </div>
     </div>
 
-    <script src="../js/biliWebCode.js"></script>
+    <script src="../ts/biliWebCode.js"></script>
 
     <ul class="right_entry">
       <li class="bb"><a href="https://space.bilibili.com/243857124?spm_id_from=333.1007.0.0">
@@ -98,90 +98,35 @@
   <div class="bili-gardone">
     <div class="imagesleft">
       <div id="imagesone" class="picture">
-        <img id="img" src="images/a2.jpeg" alt="" style="display: block;">
-        <!-- <img src="images/a2.jpeg" alt="">
-        <img src="images/a3.jpeg" alt="">
-        <img src="images/a4.jpeg" alt=""> -->
-
-        <!-- <p>
-          <button id="btnPrev">上</button>
-          <button id="btnNext">下</button>
-        </p> -->
-        <div class="turn" id="turn">
-          <button id="btnPrev">
-            < </button>
-              <button id="btnNext"> > </button>
-        </div>
-
+        <img id="img" src="images/a1.jpeg" alt="" style="display: block;">
+        <p>
+          <input type="button" value="<" onclick="shang()">
+          <input type="button" value=">" onclick="xia()">
+        </p>
       </div>
 
-      <!-- <ul id="ulone" class="pictureList">
-        <li>pic1</li>
-        <li>pic2</li>
-        <li>pic3</li>
-        <li>pic4</li>
-      </ul> -->
-
-      <script>
-        var arr = ["images/a1.jpeg", "images/a2.jpeg", "images/a3.jpeg", "images/a4.jpeg"]
-        var divbtn = document.getElementById("turn")
-        var btns = divbtn.getElementsByTagName("button")
-        var divimg = document.getElementById("imagesone")
-        var img = divimg.getElementsByTagName("img")[0]
-        // var btns = document.querySelectorAll('button')
-        // var select = document.querySelector('.picture')
-        // const divimg = document.getElementById("imagesone")
-        // var img = document.querySelectorAll('img')[2];
-
-        var num = 0;
-        btns[1].onclick = function () {
-          console.log(btns[1]);
-          num++;
-          if (n > 3) {
-            num = 0;
-          }
-          img.src = arr[num];
-          console.log(img.src);
-        }
-
-        btns[0].onclick = function () {
-          console.log(btns[0]);
-          n--;
-          if (num < 0) {
-            num = 3;
-          }
-          img.src = arr[num];
-          console.log(img.src);
-        }
-      </script>
-
+      <script src="../ts/picturnchange.js"></script>
       <!-- <script>
-        const imagesone = document.getElementById("imagesone");
-        const img = imagesone.getElementsByTagName("img");
-        // const hys = imagesone.getElementById("hys");
-        // const hyx = imagesone.getElementById("hyx");
-        const ulone = document.getElementById("ulone")
-        const li = ulone.getElementsByTagName("li");
-        hys.onclick = function () {
-          for (let j = 0; j < img.length; j++) {
-            img[j].style.display = 'none';
+        var images = ["a1.jpeg", "a2.jpeg", "a3.jpeg", "a4.jpeg"]
+        var index = 0;
+
+
+        function shang() {
+          if (index === 0) {
+            index = 3;
+          } else {
+            index--;
           }
+          document.getElementById("img").setAttribute("src", "images/" + images[index])
         }
-        for (var i = 0; i < 4; i++) {
-          li[i].index = i;
-          li[i].onmouseover = function () {
-            this.style.backgroundColor = 'yellow';
 
-            for (let j = 0; j < img.length; j++) {
-              img[j].style.display = 'none';
-            }
-            img[this.index].style.display = 'block';
-            console.log(this);
+        function xia() {
+          if (index === 3) {
+            index = 0;
+          } else {
+            index++;
           }
-
-          li[i].onmouseout = function () {
-            this.style.backgroundColor = '#eee';
-          }
+          document.getElementById("img").setAttribute("src", "images/" + images[index])
         }
       </script> -->
 
@@ -237,6 +182,104 @@
           <img border="0" src="../images/t5.png" width="267px" height="150px"><span
             class="tgone">你在干什么啊，火柴人？？？</span><br><br><span class="tgtwo">UP 75fps 3-7</span></a></li>
     </ul>
+  </div>
+  <div class="bili-gardthree">
+    <div class="bili-gardthreenew">
+      <div class="cartoon-top">
+        <div class="cartoon-name">
+          动画
+        </div>
+        <div class="cartoon-btn">
+          <button id="refresh">换一换</button>
+          <button id="more">查看更多</button>
+        </div>
+        <script src="../ts/cartoonbtn.js"></script>
+        <!-- <script>
+          var cartoonbtn = document.getElementById("more");
+          cartoonbtn.onclick = function () {
+            location.href = "https://www.bilibili.com/v/douga?spm_id_from=333.1007.0.0"
+          }
+        </script> -->
+      </div>
+      <ul class="cartoon">
+        <li><a
+            href="https://www.bilibili.com/video/BV1Yq4y1i7q9?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d1.png" width="262px" height="150px"><span class="dhone">【封号斗罗】今晚8点，
+              我在小黑屋等你！</span><br><br><span class="dhtwo">UP 其人 3-11</span> </a></li>
+        <li><a
+            href="https://www.bilibili.com/video/BV1Wh411J7KN?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d2.png" width="262px" height="150px"><span
+              class="dhone">[凹凸世界/赞德]x天使的一分钟不心动挑战</span><br><br><span class="dhtwo">UP kerla 2021-10-7</span> </a></li>
+        <li><a
+            href="https://www.bilibili.com/video/BV19Z4y1z7fU?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d3.png" width="262px" height="150px"><span class="dhone">前方高能，经费在燃烧
+              黑saber最震撼的打戏</span><br><span class="dhtwo">UP 他与神明皆失| 3-15</span> </a></li>
+        <li><a
+            href="https://www.bilibili.com/video/BV1kS4y137a3?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d4.png" width="262px" height="150px"><span
+              class="dhone">【原神小剧场/荧魈号】魈的美梦难道不是....？</span><br><span class="dhtwo">UP v-c皮皮加 3-11</span> </a></li>
+        <li><a
+            href="https://www.bilibili.com/video/BV1Bu411X7cG?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d5.png" width="262px" height="150px"><span
+              class="dhone">【12月/守秘稻草人/SG社】稻草人团-卡森德拉的黑色嘉年华 正式pv</span><br><br><span class="dhtwo">UP 山田六神 2-27</span>
+          </a>
+        </li>
+        <li><a
+            href="https://www.bilibili.com/video/BV1X34y1b7jA?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d6.png" width="262px" height="150px"><span class="dhone">云堇 -
+              扬旗鸣鼓</span><br><br><span class="dhtwo">UP ARonisc 3-7</span> </a></li>
+        <li><a
+            href="https://www.bilibili.com/video/BV1uP4y1g7ek?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d7.png" width="262px" height="150px"><span
+              class="dhone">撞到虚脱~</span><br><br><span class="dhtwo">UP 壹零言 2-28</span> </a></li>
+        <li><a
+            href="https://www.bilibili.com/video/BV1tS4y1F7xp?spm_id_from=333.1007.partition_recommend.content.click">
+            <img border="0" src="../images/d8.png" width="262px" height="150px"><span
+              class="dhone">艾比小姐经历了人生的大起大落~</span><br><br><span class="dhtwo">UP 求你们都去看看少歌吧 2-21</span> </a></li>
+
+      </ul>
+    </div>
+    <div class="ranking">
+      <div class="ranking-top">
+        <div class="ranking-name">排行榜</div>
+        <button id="ranking-btn">更多</button>
+      </div>
+      <script src="../ts/rankingbtn.js"></script>
+      <!-- <script>
+        var rankbtn = document.getElementById("ranking-btn");
+        rankbtn.onclick = function () {
+          location.href = "https://www.bilibili.com/v/popular/rank/douga?spm_id_from=333.1007.0.0"
+        }
+      </script> -->
+      <ul class="entry">
+        <li class="entry-content1"><a
+            href="https://www.bilibili.com/video/BV1Cq4y1e7bq?spm_id_from=333.1007.partition_rank.content.click">
+            <span>1、【原神动画】酥雪漾春雨 绯霞润凝宵</span>
+          </a></li>
+        <li class="entry-content2" id="entry-color1"><a
+            href="https://www.bilibili.com/video/BV1Bu411B7fu?spm_id_from=333.1007.partition_rank.content.click">
+            <span>2、 一口气看完，东晋喰种1-4季！</span></a></li>
+        <li class="entry-content3"><a
+            href="https://www.bilibili.com/video/BV1Cr4y1B79T?spm_id_from=333.1007.partition_rank.content.click">
+            <span>3、 这是我上课犯困写出来的东西</span></a></li>
+        <li class="entry-content4" id="entry-color2"><a
+            href="https://www.bilibili.com/video/BV153411L72z?spm_id_from=333.1007.partition_rank.content.click">
+            <span>4、 逊呐，一杯就倒了（物理）</span></a></li>
+        <li class="entry-content5"><a
+            href="https://www.bilibili.com/video/BV1nr4y1i7Wy?spm_id_from=333.1007.partition_rank.content.click">
+            <span>5、 五档路飞觉醒终极猜想！</span></a></li>
+        <li class="entry-content6" id="entry-color3"><a
+            href="https://www.bilibili.com/video/BV1sY41137hb?spm_id_from=333.1007.partition_rank.content.click">
+            <span>6、 成龙历险记，但是是真人版</span></a></li>
+        <li class="entry-content7"><a
+            href="https://www.bilibili.com/video/BV1TR4y1V7Vp?spm_id_from=333.1007.partition_rank.content.click">
+            <span>7、【天气愈报】阵雨之拍被子版</span></a></li>
+        <li class="entry-content8" id="entry-color4"><a
+            href="https://www.bilibili.com/video/BV1Ab4y1p7Mh?spm_id_from=333.1007.partition_rank.content.click">
+            <span>8、 当黑魂玩家来到艾尔登法环</span></a></li>
+
+      </ul>
+    </div>
   </div>
 </div>
 
